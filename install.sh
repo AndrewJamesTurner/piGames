@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # bsdgames
-sudo apt-get install bsdgames
+apt-get -y install bsdgames
 
 # lynx
-sudo apt-get install lynx
+apt-get -y install lynx
 
 # myman
-sudo apt-get install libncurses5-dev groff
+apt-get -y install libncurses5-dev groff
 cd ~
 mkdir -p tmp
 cd tmp
@@ -16,16 +16,16 @@ tar xvfvz myman-wip-2009-10-30.tar.gz
 cd myman-wip-2009-10-30
 ./configure
 make
-sudo make install
+make install
 
 # invaders
-sudo apt-get install ninvaders
+apt-get -y install ninvaders
 
 # moon buggy
-sudo apt-get install moon-buggy
+apt-get -y install moon-buggy
 
 # bastet
-sudo apt-get install bastet
+apt-get -y install bastet
 
 # 2048
 cd ~
@@ -33,12 +33,12 @@ mkdir -p tmp
 cd tmp
 wget https://raw.githubusercontent.com/mevdschee/2048.c/master/2048.c
 gcc -o 2048 2048.c
-sudo mkdir /opt/2048
-sudo cp 2048 /opt/2048/
-sudo ln -s /opt/2048/2048 /usr/local/bin/2048
+mkdir /opt/2048
+cp 2048 /opt/2048/
+ln -s /opt/2048/2048 /usr/local/bin/2048
 
 # greed
-sudo apt-get install greed
+apt-get -y install greed
 
 # ski
 cd ~
@@ -47,13 +47,13 @@ cd tmp
 wget http://www.catb.org/~esr/ski/ski-6.11.tar.gz
 tar xvfvz ski-6.11.tar.gz
 cd ski-6.11
-sudo make install
+make install
 
 # nethack
-sudo apt-get install nethack-console
+apt-get -y install nethack-console
 
 # csokoban, cmines and cblocks
-sudo apt-get install libgpm-dev libncurses5-dev
+apt-get -y install libgpm-dev libncurses5-dev
 cd ~
 mkdir -p tmp
 cd tmp
@@ -62,7 +62,7 @@ tar xvfvz cgames-2.2a.tar.gz
 cd cgames-2.2a 
 ./configure --with-ncurses
 make
-sudo make install
+make install
 
 # Trog
 cd ~
@@ -71,11 +71,11 @@ cd tmp
 wget https://github.com/JohnAnthony/TROG/archive/master.zip
 unzip master.zip
 cd TROG-master
-sudo make install
+make install
 
-sudo mkdir /opt/games
-sudo cp games /opt/games/
-sudo ln -s /opt/games/games /usr/local/bin/games
+mkdir /opt/games
+cp games /opt/games/
+ln -s /opt/games/games /usr/local/bin/games
 
 
 
